@@ -9,4 +9,11 @@ function toggleMenu() {
 
     // take 'variable' previously created, access the list of classes it has, toggle "hide" class
     menu.classList.toggle("hide");
+
+    // change the inside text/html of "menuButton"
+    if (menu.classList.contains("hide")) {
+        menuButton.innerHTML = "menu"
+    } else {
+        menuButton.innerHTML = "close";
+    }
 }
