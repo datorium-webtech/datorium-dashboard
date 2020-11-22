@@ -1,0 +1,116 @@
+/*
+ * Page structure
+ */
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', Helvetica, sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 60px;
+    background-color: #1976d2;
+    padding: 10px 20px 10px 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    width: min-content;
+    height: 40px;
+    justify-content: space-between;
+}
+
+.logo img {
+    height: 25px;
+}
+
+.logo span {
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+main {
+    width: 100%;
+    height: calc(100% - 60px);
+    display: flex;
+}
+
+article {
+    width: 100%;
+    height: 100%;
+}
+
+aside {
+    width: 225px;
+    height: 100%;
+    background-color: #1161b1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0 20px 20px;
+    box-sizing: border-box;
+}
+
+/*
+ * Navigation content.
+ */
+
+aside a {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 20px;
+    opacity: 0.6;
+    display: flex;
+    align-items: center;
+}
+
+aside a:last-child {
+    margin-bottom: 0px;
+}
+
+aside a:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+aside a .material-icons {
+    margin-right: 10px;
+}
+
+.menu-button.material-icons {
+    color: #ffffff;
+    font-size: 36px;
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    aside {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        align-items: center;
+    }
+
+    aside a {
+        font-size: 24px;
+    }
+
+    aside a .material-icons {
+        display: none; /* instead of opacity: 0 */
+    }
+
+    .menu-button.material-icons {
+        display: block;
+    }
+
+    aside.hide {
+        display: none;
+    }
+}
