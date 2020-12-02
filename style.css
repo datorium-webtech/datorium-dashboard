@@ -170,6 +170,45 @@ aside a .material-icons {
     background-color: #6200EA;
 }
 
+.component {
+    margin: 20px;
+    width: calc(100% - 40px);
+    border: 1px solid #888;
+    border-radius: 1px;
+    box-shadow: 0 0 5px #ccc;
+}
+
+.component-header {
+    padding: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.course > div {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-auto-rows: 60px;
+    background-color: #ccc;
+    color: #555;
+    font-size: 18px;
+}
+
+.course > div:nth-child(1) {
+    grid-template-columns: 10% 60% 30%;
+    background-color: transparent;
+    font-size: 20px;
+}
+
+.course > div:nth-child(1) > div:nth-child(1) {
+    color: #888;
+    font-size: 16px;
+}
+
+.course > div > div {
+    display: flex;
+    align-items: center;
+}
+
 @media (min-width: 1024px) {
     .statistics div {
         width: 24%;
