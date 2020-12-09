@@ -57,41 +57,17 @@ function refreshFigures() {
 
 // Call the function that was created above.
 refreshFigures();
-// Change the value for the figure variables
-salesFigure = 135000;
-enrollmentFigure = 2800;
-// Call function again, so that the text is set to the new values.
-refreshFigures();
 
-/**
- * [ARRAY] (sometimes called a list)
- * Array is a list of values (inside [], seperated by a comma). Position of an item is called an "index".
- * Index starts at 0. (So the first item in an array has index of 0, second has 1, etc).
- */
-let exampleArray = [7, 9, 20, "exampleString"];
-console.log("The first item in exampleArray is " + exampleArray[0]); // 7
-console.log("Last item is " + exampleArray[3]); // Write a console.log that will show me the last item.
-// How to add new values to a list?
-exampleArray.push(9999); // Now the list looks like this: [7, 9, 20, "exampleString", 9999]
-
-/**
- * [JSON] (JavaScript Object Notation)
- * Syntax / format for storing data.
- * Simple meaning: It's similar to a list but rather than "index", values have a "key".
- */
-let exampleJson = {
-    "firstName": "John",
-    "lastName": "Doe"
-};
-
-console.log("The first name of the person is " + exampleJson["firstName"]);
-// Result of this should be "The first name of the person is John"
-exampleJson["age"] = 20; // Add a new value to the json
-console.log("The age of the person is" + exampleJson["age"]); // Write the new value to console
-
-
-// Create a new empty array and call it "courseList" and create a function and call it "createCourse"
-let courseList = [];
+// TASK: Create a function that takes 1 parameter "parent"
+// Implementation:
+// 1. Create a new "div"
+// 2. Add / append the new div to the parent
+// Return the newly created div
+function createDiv(parent) {
+    let newDiv = document.createElement("div");
+    parent.append(newDiv);
+    return newDiv;
+}
 
 // 4 parameters: name price expense and enrollment
 function createCourse(name, price, expense, enrollment) {
@@ -105,3 +81,16 @@ function createCourse(name, price, expense, enrollment) {
     };
     return course; // this function will return the json when its called
 }
+
+// TASK: Populate list with 3 courses
+// {name: "Basic WebTech", price: 180, expense: 120, enrollments: 400}
+// {name: "Advanced WebTech", price: 240, expense: 160, enrollments: 300}
+// {name: "Pro WebTech", price: 160, expense: 120, enrollments: 100}
+// Create a new empty array and call it "courseList" and create a function and call it "createCourse"
+let courseList = [
+    createCourse("Basic WebTech", 180, 120, 400),
+    createCourse("Advanced WebTech", 240, 160, 300),
+    createCourse("Pro WebTech", 160, 120, 100)
+];
+
+console.log(courseList);
