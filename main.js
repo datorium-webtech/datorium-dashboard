@@ -92,5 +92,32 @@ let courseList = [
     createCourse("Advanced WebTech", 240, 160, 300),
     createCourse("Pro WebTech", 160, 120, 100)
 ];
-
 console.log(courseList);
+
+// (!!!) TASK Create a function createCourseDiv with parameters: "course", "no"
+// inside the function:
+// 1. Create a variable "section" that will find the section that contains all courses / course list.
+// 2. Create a variable "container" that will create a div and make the section as its parent.
+// 3. Give the container a class "course".
+
+/**
+ * Creates an HTML div element with all information about a course.
+ * @param {{}} course JSON object with all the information about a course.
+ * @param {number} no Ordinal numeration.
+ */
+function createCourseDiv(course, no) {
+    let section = document.querySelector(".course-list");
+    let container = createDiv(section);
+    container.classList.add("course");
+
+    // TASK: Recreate the first row with javascript
+    // We want to use the number and course name from variables
+    let row1 = createDiv(container);
+    let row1_1 = createDiv(row1);
+    row1_1.innerHTML = "#" + no;
+    let row1_2 = createDiv(row1);
+    let row1_3 = createDiv(row1)
+
+}
+
+createCourseDiv(null, "99");
