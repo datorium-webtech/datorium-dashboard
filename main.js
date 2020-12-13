@@ -90,7 +90,9 @@ function createCourse(name, price, expense, enrollment) {
 let courseList = [
     createCourse("Basic WebTech", 180, 120, 400),
     createCourse("Advanced WebTech", 240, 160, 300),
-    createCourse("Pro WebTech", 160, 120, 100)
+    createCourse("Pro WebTech", 160, 120, 100),
+    createCourse("ABC", 214, 120, 100),
+    createCourse("Some Course", 523, 432, 100)
 ];
 console.log(courseList);
 
@@ -116,8 +118,32 @@ function createCourseDiv(course, no) {
     let row1_1 = createDiv(row1);
     row1_1.innerHTML = "#" + no;
     let row1_2 = createDiv(row1);
+    row1_2.innerHTML = course["name"];
     let row1_3 = createDiv(row1)
 
+    // TASK: Create the row for Price.
+    // TASK: Fill the second row with text
+    let row2 = createDiv(container);
+    let row2_1 = createDiv(row2);
+    row2_1.innerHTML = "Price";
+    let row2_2 = createDiv(row2);
+    row2_2.innerHTML = "&euro; " + course["price"];
+
+    // TASK: Create last 2 rows for expense and enrollments
+    // Fill the rows with all information
+    let row3 = createDiv(container);
+    let row3_1 = createDiv(row3);
+    row3_1.innerHTML = "Expense";
+    let row3_2 = createDiv(row3);
+    row3_2.innerHTML = "&euro; " + course["expense"];
+
+    let row4 = createDiv(container);
+    let row4_1 = createDiv(row4);
+    row4_1.innerHTML = "Enrollment";
+    let row4_2 = createDiv(row4);
+    row4_2.innerHTML = course["enrollment"];
 }
 
-createCourseDiv(null, "99");
+createCourseDiv(courseList[0], "1");
+createCourseDiv(courseList[1], "2");
+createCourseDiv(courseList[2], "3");
